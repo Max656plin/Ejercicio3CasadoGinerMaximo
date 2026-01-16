@@ -1,12 +1,26 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('Ejercicio3CasadoGinerMaximo');
+  public title: string = 'Mi primera aplicación en Angular';
+  public counter: number = 10;
+
+  increment(): void {
+    this.counter += 1;
+  }
+
+  decrement(): void {
+    this.counter -= 1;
+  }
+
+  reset(): void {
+    this.counter = 0;
+  }
 }
