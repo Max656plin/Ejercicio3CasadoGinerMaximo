@@ -1,0 +1,10 @@
+<div class="container mt-4">
+  <h1>Hero Page</h1>
+  <p><strong>Name:</strong> {{ name() | uppercase }}</p>
+  <p><strong>Age:</strong> {{ age() }}</p>
+  <p><strong>Description:</strong> {{ getHeroDescription() }}</p>
+
+  <button class="btn btn-primary me-2" (click)="changeHero()">Change Hero</button>
+  <button class="btn btn-secondary me-2" (click)="changeAge()">Change Age to 60</button>
+  <button class="btn btn-warning" (click)="resetForm()">Reset</button>
+</div>
